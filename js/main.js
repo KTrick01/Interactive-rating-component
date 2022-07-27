@@ -6,6 +6,7 @@ const thanks = document.querySelector(".ratingScore__txt")
 
 
 
+
 for(let i = 0 ; i < selectedNumber.length ; i++){
     
     submit.setAttribute("disabled","true")

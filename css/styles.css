@@ -42,24 +42,49 @@ body {
 }
 
 .ratingScreen {
+    opacity: 1;
+    transition: 1s;
     
+    transform: translateX(0%);
     display: flex;
     flex-direction: column;
 
 }
 
 .thanksScreen {
-    padding: 1.5rem;
+    
     gap: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    transition: 1s;
     
 }
 
+@keyframes thanks {
+    0% {transform: rotate(0deg) scale(1.0);}
+    25% {transform: rotate(5deg) ;}
+    50% {transform: rotate(-5deg) ;}
+    75% {transform: rotate(5deg) ;}
+    100% {transform: rotate(-5deg) scale(1.1);}
+}
+.thanks__Img {
+    width: 100%;
+    animation: thanks;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    
+}
 .none {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transform: translateX(50%);
+    
+    
 }
 
 .thanks__text {
@@ -69,9 +94,7 @@ body {
     text-align: center;
     gap: 1rem;
 }
-.thanks__Img {
-    width: 100%;
-}
+
 .ratingScore {
     background-color: var(--Dark-Blue);
     padding: .3rem 1rem;
@@ -94,7 +117,15 @@ body {
     margin-bottom: 1rem;
     width: 100%;
 }
+@keyframes rotate {
+
+    0% {transform: rotate(0) scale(1);}
+    100% {transform: rotate(360deg) scale(1.2);}
+    
+}
+
 .starIcon {
+    animation: rotate 4s alternate infinite ;
     border-radius: 50%;
     padding: 1rem;
     background-color: rgb(38, 46, 55);
