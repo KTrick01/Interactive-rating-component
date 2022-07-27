@@ -132,11 +132,7 @@ body {
     transition:  .2s;
 }
 
-.ratingNumber:hover {
-    background-color: var(--Light-Grey);
-    opacity: 1;
-    transform: scale(1.1);
-}
+
 
 .ratingNumberSelected {
     background-color: var(--Orange);
@@ -169,8 +165,17 @@ body {
     cursor: default;
     
 }
-.submitBtn:hover {
-    transform: scale(1.03);
-    background-color: white;
-    color: var(--Orange);
+
+
+@media (hover: hover) {
+    .submitBtn:hover {
+        transform: scale(1.03);
+        background-color: white;
+        color: var(--Orange);
+    }
+    .ratingNumber:hover {
+        background-color: var(--Light-Grey);
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }
