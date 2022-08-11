@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
 }
 
 :root {
-    
+
     font-family: 'Overpass', sans-serif;
     font-size: 15px;
     --Orange: hsl(25, 97%, 53%);
@@ -17,11 +18,12 @@
     --Dark-Blue: hsl(213, 19%, 18%);
     --Very-Dark-Blue: hsl(216, 12%, 8%);
     --lightBlue: hsl(214, 11%, 12%);
-    
+
 }
 
 html, body {
     min-height: 100vh;
+    
 }
 
 body {
@@ -29,6 +31,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
 }
 
@@ -44,7 +47,6 @@ body {
 .ratingScreen {
     opacity: 1;
     transition: 1s;
-    
     transform: translateX(0%);
     display: flex;
     flex-direction: column;
@@ -60,31 +62,48 @@ body {
     align-items: center;
     opacity: 1;
     transition: 1s;
-    
+
 }
 
 @keyframes thanks {
-    0% {transform: rotate(0deg) scale(1.0);}
-    25% {transform: rotate(5deg) ;}
-    50% {transform: rotate(-5deg) ;}
-    75% {transform: rotate(5deg) ;}
-    100% {transform: rotate(-5deg) scale(1.1);}
+    0% {
+        transform: rotate(0deg) scale(1.0);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-5deg) scale(1.1);
+    }
 }
+
 .thanks__Img {
     width: 100%;
     animation: thanks;
     animation-iteration-count: infinite;
     animation-duration: 7s;
     animation-direction: alternate;
-    
+
 }
+
 .none {
     opacity: 0;
     visibility: hidden;
     height: 0;
+    overflow: hidden;
     transform: translateX(50%);
-    
-    
+
+
 }
 
 .thanks__text {
@@ -100,36 +119,46 @@ body {
     padding: .3rem 1rem;
     border-radius: 1rem;
 }
+
 .ratingScore__txt {
     color: var(--Orange);
-    
+
 }
+
 .title {
     font-size: 2rem;
     font-weight: 700;
 }
+
 .paragraph {
     color: var(--Medium-Grey);
     line-height: 1.5;
-    
+
 }
+
 .starIconContainer {
     margin-bottom: 1rem;
     width: 100%;
 }
+
 @keyframes rotate {
 
-    0% {transform: rotate(0) scale(1);}
-    100% {transform: rotate(360deg) scale(1.2);}
-    
+    0% {
+        transform: rotate(0) scale(1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1.2);
+    }
+
 }
 
 .starIcon {
-    animation: rotate 4s alternate infinite ;
+    animation: rotate 4s alternate infinite;
     border-radius: 50%;
     padding: 1rem;
     background-color: rgb(38, 46, 55);
-    
+
 }
 
 .interactiveCard__texts {
@@ -144,7 +173,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-    
+
 }
 
 .ratingNumber {
@@ -160,7 +189,7 @@ body {
     width: 49px;
     background-color: rgb(38, 46, 55);
     border-radius: 50%;
-    transition:  .2s;
+    transition: .2s;
 }
 
 
@@ -189,12 +218,13 @@ body {
 .submitBtn:disabled {
     opacity: .5;
 }
+
 .submitBtn:hover:disabled {
     transform: none;
     background-color: var(--Orange);
     color: white;
     cursor: default;
-    
+
 }
 
 
@@ -204,6 +234,7 @@ body {
         background-color: white;
         color: var(--Orange);
     }
+
     .ratingNumber:hover {
         background-color: var(--Light-Grey);
         opacity: 1;
